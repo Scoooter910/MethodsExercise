@@ -2,33 +2,35 @@
 {
     public class Program
     {
-        public static int Add(int num1, int num2)
-        { var answer = num1 + num2;
-        return answer;
 
-        }
-        public static int Multiply(int num1, int num2, int num3)
+
+        public static void Add(int num1, int num2)
         {
-            return num1 * num2 * num3; 
+            int answer = num1 + num2;
+            Console.WriteLine(answer);
+        }
+        public static void Multiply(int num1, int num2)       
+        {
+            int answer = num1 * num2;
+            Console.WriteLine(answer);
+        }
         
         
-        }
-        public static int Divide(int num1, int num2)
+        public static void Divide(int num1, int num2)
         {
-            return num1 / num2;
+            int answer = num1 / num2;
+            Console.WriteLine(answer);
 
         }
-        public static int Subtract(int num1, int num2)
+        public static void Subtract(int num1, int num2)
         {
-            return num1 - num2;
+            int answer = num1 - num2;
+            Console.WriteLine(answer);
         
         }
         static void Main(string[] args)
-        {   
-            var amountOfCars = Add(2, 6);
-            var something = Multiply(60, 2, 4);
-            var dogs = Divide(10, 2);
-            var cats = Subtract(20, 10);
+        {
+            
 
             Console.WriteLine("Hello - What is your first name?");
             var userName = Console.ReadLine();
@@ -43,7 +45,7 @@
             var band = Console.ReadLine();
 
             Console.WriteLine($"Thanks, {userName}! Here is your profile");
-           Console.WriteLine("------------------------------");
+            Console.WriteLine("------------------------------");
 
 
             Console.WriteLine($"Name: {userName}");
@@ -51,16 +53,18 @@
             Console.WriteLine($"Favorite Animal: {animal}");
             Console.WriteLine($"Favorite Band: {band}");
 
-            Console.WriteLine("Give me a number to add");
-            int num1 = int.Parse(Console.ReadLine());
+            Add(10, 10);
+            Subtract(10, 5);
+            Multiply(10, 5);
+            Divide(10, 5);
 
-            Console.WriteLine("Give me a number to add to the fist one");
-            int num2 = int.Parse(Console.ReadLine());
+            
 
-            Console.WriteLine($"The is: (sum)");
 
-            int add = Add(num1, num2);
-            Console.WriteLine($"The sum is: {add}");
+
+
+
+
         }
 
     }
